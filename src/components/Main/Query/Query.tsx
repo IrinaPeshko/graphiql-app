@@ -2,7 +2,7 @@ import styles from './query.module.scss';
 import ArrowIcon from '../../../assets/211687_down_arrow_icon.svg?react';
 import 'allotment/dist/style.css';
 import CodeMirror from '@uiw/react-codemirror';
-import { bbedit } from '@uiw/codemirror-theme-bbedit';
+import { tokyoNightDay } from '@uiw/codemirror-theme-tokyo-night-day';
 import { useAppDispatch, useAppSelector } from '../../../store/store';
 import {
   setQueryIsOpen,
@@ -12,8 +12,7 @@ import { useEffect, useState } from 'react';
 import { updateTabContent } from '../../../store/reducers/tabSlice';
 import { variablesTemplate } from './variablesTemplate';
 import { headersTemplate } from './headersTemplate';
-import { json } from '@codemirror/lang-json'
-
+import { json } from '@codemirror/lang-json';
 
 function Query() {
   const dispatch = useAppDispatch();
@@ -97,23 +96,21 @@ function Query() {
       <div className={styles.queryEditor}>
         {isActive === 0 ? (
           <CodeMirror
-            theme={bbedit}
+            theme={tokyoNightDay}
             width="100%"
             editable={true}
             value={variablesContent}
             onChange={handleContentChange}
-        extensions={[json()]}
-            
+            extensions={[json()]}
           />
         ) : (
           <CodeMirror
-            theme={bbedit}
+            theme={tokyoNightDay}
             width="100%"
             editable={true}
             value={headersContent}
             onChange={handleContentChange}
-        extensions={[json()]}
-
+            extensions={[json()]}
           />
         )}
       </div>
