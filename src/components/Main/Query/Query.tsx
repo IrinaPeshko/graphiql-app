@@ -12,6 +12,8 @@ import { useEffect, useState } from 'react';
 import { updateTabContent } from '../../../store/reducers/tabSlice';
 import { variablesTemplate } from './variablesTemplate';
 import { headersTemplate } from './headersTemplate';
+import { json } from '@codemirror/lang-json'
+
 
 function Query() {
   const dispatch = useAppDispatch();
@@ -100,6 +102,8 @@ function Query() {
             editable={true}
             value={variablesContent}
             onChange={handleContentChange}
+        extensions={[json()]}
+            
           />
         ) : (
           <CodeMirror
@@ -108,6 +112,8 @@ function Query() {
             editable={true}
             value={headersContent}
             onChange={handleContentChange}
+        extensions={[json()]}
+
           />
         )}
       </div>

@@ -3,6 +3,8 @@ import 'allotment/dist/style.css';
 import CodeMirror from '@uiw/react-codemirror';
 import { bbedit } from '@uiw/codemirror-theme-bbedit';
 import { useAppSelector } from '@/store/store';
+import { json } from '@codemirror/lang-json'
+
 
 function Response() {
   const activeTab = useAppSelector((store) => store.tabs.activeTab);
@@ -17,6 +19,7 @@ function Response() {
         readOnly={true}
         theme={bbedit}
         value={response}
+        extensions={[json()]}
       />
     </div>
   );

@@ -11,11 +11,14 @@ import { useEffect } from 'react';
 import { prettifying } from '@/utils/prettifying';
 import { IRequest } from '@/types/general';
 import { makeRequest } from '@/utils/makeRequest';
+import { basicSetup } from 'codemirror';
+import { graphql } from 'cm6-graphql';
 
 function Request() {
   const dispatch = useAppDispatch();
   const tabs = useAppSelector((state) => state.tabs.tabs);
   const activeTab = useAppSelector((state) => state.tabs.activeTab);
+  // const schema = useAppSelector((state) => state.)
 
   const handleNewTabContent = (content: string) => {
     dispatch(updateTabContent({ index: activeTab, requestContent: content }));
@@ -62,6 +65,7 @@ function Request() {
             value={tabs[activeTab]?.requestContent}
             theme={bbedit}
             onChange={handleNewTabContent}
+            extensions={[basicSetup, graphql()]}
           />
         </div>
         <div className={styles.requestButtons}>

@@ -15,12 +15,14 @@
     "format:fix": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\""
   },
   "dependencies": {
+    "@codemirror/lang-json": "^6.0.1",
     "@hookform/resolvers": "^3.3.2",
     "@reduxjs/toolkit": "^2.0.1",
     "@types/react-redux": "^7.1.30",
     "@uiw/codemirror-theme-bbedit": "^4.21.21",
     "@uiw/react-codemirror": "^4.21.21",
     "allotment": "^1.19.3",
+    "cm6-graphql": "^0.0.12",
     "codemirror": "^6.0.1",
     "firebase": "^10.7.0",
     "graphql": "^16.8.1",
