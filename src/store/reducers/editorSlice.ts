@@ -24,7 +24,7 @@ const userSlice = createSlice({
     },
     setQueryIsOpen(state, action: PayloadAction<IEditor>) {
       state.isQueryOpen = action.payload.isQueryOpen;
-    },
+    }
   },
 });
 

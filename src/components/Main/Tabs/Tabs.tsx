@@ -23,6 +23,7 @@ function Tabs() {
         variablesContent: '',
         headersContent: '',
         url: '',
+        responseContent: ''
       })
     );
     const newIndex = tabs.length;

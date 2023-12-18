@@ -20,19 +20,16 @@ function Documentation() {
       if (!isDocOpen || tabs[activeTab].url === '') {
         return;
       }
-
       if (tabs[activeTab].url !== prevUrl.current) {
         types.current = await getSchemaTypes(tabs[activeTab].url);
         prevUrl.current = tabs[activeTab].url;
       }
-
       setIsLoading(false);
     }
-
     getAllTypes();
   }, [isDocOpen, tabs[activeTab].url]);
-
   const deferredTypes = useDeferredValue(types.current);
+
 
   return (
     <div className={`${styles.docDescription} ${styles.container}`}>
