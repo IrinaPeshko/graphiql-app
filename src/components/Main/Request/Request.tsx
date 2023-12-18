@@ -12,8 +12,8 @@ import { prettifying } from '@/utils/prettifying';
 import { IRequest } from '@/types/general';
 import { makeRequest } from '@/utils/makeRequest';
 import { graphql } from 'cm6-graphql';
-import { GraphQLSchema, buildClientSchema } from 'graphql';
-import { introspectionQuery } from '@/utils/fetchGraphQLSchema/graphqlIntrospectionQuery';
+import { GraphQLSchema } from 'graphql';
+import { fetchGraphQLSchema } from '@/utils/fetchGraphQLSchema/fetchGraphQLSchema';
 
 function Request() {
   const dispatch = useAppDispatch();
@@ -33,32 +33,13 @@ function Request() {
   }, [tabs, handleNewTabContent]);
 
   useEffect(() => {
-    async function fetchGraphQLSchema(url: string) {
-      try {
-        const response = await fetch(url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ query: introspectionQuery }),
-        });
-
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-
-        const responseBody = await response.json();
-        if (responseBody.errors) {
-          console.error('GraphQL Errors:', responseBody.errors);
-          throw new Error('GraphQL Errors');
-        }
-        const newSchema = buildClientSchema(responseBody.data)
-        setSchema(newSchema);
-      } catch (error) {
-        console.error('Error fetching GraphQL schema:', error);
+    const getSchema = async (url:string) => {
+      if (url) {
+        const newSchema = await fetchGraphQLSchema(url);
+        setSchema(newSchema)
       }
     }
-    if (url) {
-      fetchGraphQLSchema(url);
-    }
+    getSchema(url)
   }, [url]);
 
   const onPrettifyClick = (request: string) => {
