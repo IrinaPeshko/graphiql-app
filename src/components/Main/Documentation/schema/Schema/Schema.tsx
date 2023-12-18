@@ -10,9 +10,8 @@ interface ISchemaProps {
 }
 
 function Schema({ types }: ISchemaProps) {
-  const [fields, setFields] = useState<IDataItem[]>([]);
-  const field = fields[fields.length - 1];
-  // console.log('fields', fields);
+  const [data, setData] = useState<IDataItem[]>([]);
+  const field = data[data.length - 1];
 
   const filteredTypes = types
     .filter(
@@ -29,7 +28,6 @@ function Schema({ types }: ISchemaProps) {
       if (b.name === 'Mutation') return 1;
       return 0;
     });
-  // console.log('filteredTypes', filteredTypes);
 
   const selectedField = filteredTypes
     .flatMap((item) => item.fields)
@@ -41,11 +39,11 @@ function Schema({ types }: ISchemaProps) {
     <div>
       {selectedType ? (
         <>
-          <Navigation fields={fields} setData={setFields} />
+          <Navigation data={data} setData={setData} />
           <Details
-            field={selectedField}
+            data={selectedField}
             type={selectedType}
-            setData={setFields}
+            setData={setData}
           />
         </>
       ) : (
@@ -59,7 +57,7 @@ function Schema({ types }: ISchemaProps) {
               key={`${item.name}-${index}`}
               title={item.name.toLocaleUpperCase()}
               data={item.fields}
-              setData={setFields}
+              setData={setData}
             />
           ))}
         </>
