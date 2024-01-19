@@ -1,0 +1,24 @@
+.ͼ16,
+.ͼ1k,
+.ͼo,
+.cm-gutters {
+  background-color: transparent !important;
+}
+.cm-tooltip-autocomplete.cm-tooltip.cm-tooltip-below ul li {
+  background-color: #8160c9;
+  color: white;
+  border: 1px solid #45266d;
+  & :hover {
+    cursor: pointer;
+  }
+}
+
+.ͼo,
+.ͼ1k {
+  color: var(--color-primary-text);
+  font-weight: 700;
+}
+
+.ͼ1n {
+  color: var(--color-editor-field);
+}

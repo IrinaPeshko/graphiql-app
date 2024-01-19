@@ -1,0 +1,73 @@
+:root {
+  --max-content-width: 1280px;
+  --max-content-padding: 0px 15px;
+}
+
+body[data-theme="light"],
+body {
+  --bg: linear-gradient(45deg, rgb(120, 67, 164), rgb(82, 147, 182));
+  --color: rgb(255, 255, 255);
+  --color-icons: rgb(255, 255, 255);
+
+  --bg-header: transparent;
+  --bg-footer: rgb(79 89 130);
+  --header-scroll:  rgb(79 89 130);
+
+  --bg-project: rgba(22, 11, 63, 0.3);
+  --bg-space: transparent;
+
+  --color-primary-text: #2a2a2a;
+  --color-secondary-text: rgb(87, 87, 87);
+  --bg-color-editor: rgba(255, 255, 255, 0.6);
+  --color-editor-buttons: #a086d9;
+  --color-editor-buttons-hover: #734da6;
+  --color-separator-border: rgba(128, 128, 128, 0.35);
+
+  --color-form: #00eeff;
+  --color-txt-form: rgb(255, 255, 255);
+  --bg-form: #494c4e57;
+  --bg-input-focus: rgb(140, 161, 163);
+  --color-error: rgb(237, 127, 127);
+
+  --burger-color: rgb(255, 255, 255);
+
+  --color-editor-field: rgb(72, 72, 201);
+  --color-editor-type: rgb(185, 117, 7);
+  --color-editor-enum: rgb(185, 18, 18);
+  --link-gradient: linear-gradient(to right, #77a1d3 0%, #79cbca 51%, #77a1d3 100%);
+  --link-shadow-color:  #eee;
+  --link-color: rgb(255, 255, 255);
+}
+
+body[data-theme="dark"] {
+  --bg: linear-gradient(0deg, rgb(197, 174, 230) 0%, rgb(189, 226, 234) 40%, rgb(41 39 86) 100%);
+  --color: rgb(255, 255, 255);
+  --color-icons: rgb(255, 255, 255);
+
+  --bg-header: transparent;
+  --bg-footer: rgb(35 34 70);
+  --header-scroll: rgb(35 34 70);
+
+  --bg-project: rgba(13, 6, 53, 0.558);
+  --bg-space: rgb(34, 33, 69);
+
+  --color-primary-text: #2a2a2a;
+  --color-secondary-text: rgb(87, 87, 87);
+  --bg-color-editor: rgba(255, 255, 255, 0.6);
+  --color-editor-buttons: #a086d9;
+  --color-editor-buttons-hover: #734da6;
+  --color-separator-border: rgba(128, 128, 128, 0.35);
+
+  --color-form: #00eeff;
+  --color-txt-form: rgb(255, 255, 255);
+  --bg-form: #222245a0;
+  --bg-input-focus: rgb(140, 161, 163);
+  --color-error: rgb(237, 127, 127);
+
+  --burger-color: rgb(255, 255, 255);
+
+
+  --link-gradient: linear-gradient(to right, #ffffff 0%, #b0b0b0 51%, #ffffff 100%);
+  --link-shadow-color:  #ffffff;
+  --link-color: black;
+}

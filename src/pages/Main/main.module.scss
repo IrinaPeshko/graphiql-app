@@ -1,0 +1,38 @@
+.mainContainer {
+  height: 78vh;
+  width: 100%;
+  padding: 10px;
+
+  *::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    width: 4px;
+    height: 4px;
+    background-color: var(--color-editor-buttons-hover);
+  }
+
+  button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-editor-buttons);
+    border: 2px solid var(--color-primary-text);
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &:hover {
+      background-color: var(--color-editor-buttons-hover);
+    }
+  }
+}

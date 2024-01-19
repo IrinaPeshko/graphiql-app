@@ -1,0 +1,61 @@
+$color: rgb(255, 255, 255);
+
+@mixin course-block-item {
+  padding: 20px;
+  width: 450px;
+  max-width: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: $color;
+}
+
+.courseBlock {
+  background: url('../../../assets/space.png') var(--bg-space) no-repeat;
+  background-size: cover;
+  padding: 1em;
+  font-size: 16px;
+  @media (max-width: 700px) {
+    font-size: 12px;
+  }
+  @media (max-width: 700px) {
+    font-size: 10px;
+  }
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+}
+
+.header {
+  font-size: 4em;
+  @include course-block-item;
+  align-self: flex-start;
+  text-align: center;
+}
+
+.about {
+  font-size: 1.7em;
+  @include course-block-item;
+  align-self: center;
+  text-align: center;
+}
+
+.course_features {
+  @include course-block-item;
+  align-self: flex-end;
+} 
+
+.course_features__title {
+  font-size: 3em;
+} 
+
+.features_item {
+  font-size: 1.5em;
+  padding-bottom: 5px;
+  list-style: circle;
+}

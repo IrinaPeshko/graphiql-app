@@ -1,0 +1,21 @@
+.docText {
+  color: var(--color-secondary-text);
+  padding: 10px 0;
+}
+
+.fieldBlock {
+  padding: 4px 0;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+}
+
+.field {
+  color: var(--color-editor-field);
+}
+
+.type {
+  color: var(--color-editor-type);
+}

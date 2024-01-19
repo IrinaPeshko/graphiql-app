@@ -1,0 +1,18 @@
+.project {
+    background-color: var(--bg-project);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    .header {
+        text-align: center;
+        padding: 10px;
+        font-size: 2em;
+    }
+    .projectItems{
+        display: flex;
+        gap: 20px;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+  }

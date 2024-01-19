@@ -1,0 +1,74 @@
+.container {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  background-color: var(--bg-color-editor);
+  height: 100%;
+
+  .apiList {
+    position: fixed;
+    top: 160px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    color: var(--color-secondary-text);
+    z-index: 50;
+    border-radius: 10px;
+    background-color: var(--color-txt-form);
+
+    li:first-child {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    li {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      button {
+        border: none;
+        background: transparent;
+        border-radius: 0;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        padding: 0;
+        filter: invert(50%);
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    padding: 4px 10px;
+    background-color: var(--bg-color-editor);
+    border-radius: 0 5px 5px 0;
+    border: 2px solid black;
+    border-left: none;
+  }
+
+  button {
+    border-radius: 5px 0 0 5px;
+    width: 30px;
+    height: 100%;
+    border: 2px solid black;
+    border-right: none;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .questionButton {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}

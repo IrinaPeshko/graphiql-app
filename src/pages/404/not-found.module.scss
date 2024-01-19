@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Teko:wght@500&display=swap');
+
+.notFoundBlock {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .header {
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+  }
+
+  .image {
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: slideIn 1s forwards, fadeIn 1s forwards;
+  }
+
+  .link {
+    display: block;
+    text-align: center;
+    margin: auto;
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 1em;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

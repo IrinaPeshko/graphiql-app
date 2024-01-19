@@ -1,0 +1,10 @@
+.docDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--bg-color-editor);
+  height: 100%;
+  padding: 10px;
+  color: var(--color-primary-text);
+  overflow: auto;
+}

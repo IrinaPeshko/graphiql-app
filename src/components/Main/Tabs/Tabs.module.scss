@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  gap: 6px;
+  padding: 5px 10px;
+  background-color: var(--bg-color-editor);
+  border-radius: 10px 10px 0 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+
+  .button {
+    border-radius: 5px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .tabButton {
+    padding: 5px 20px 5px 5px;
+    min-width: 85px;
+    width: auto;
+  }
+
+  .active {
+    font-weight: 700;
+  }
+
+  .add {
+    width: 40px;
+    font-size: 32px;
+  }
+
+  .tab {
+    position: relative;
+
+    .closeButton {
+      position: absolute;
+      top: 14px;
+      right: 5px;
+      width: 12px;
+      height: 12px;
+      filter: invert(30%);
+      border: none;
+      background: transparent;
+      cursor: pointer;
+
+      &:hover {
+        filter: invert(0);
+      }
+    }
+  }
+}

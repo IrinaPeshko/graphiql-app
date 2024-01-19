@@ -1,0 +1,44 @@
+.projectItem {
+  min-width: 150px;
+  max-width: 200px;
+  .itemHeader {
+    font-size: 1.1em;
+    padding: 5px;
+    display: flex;
+    width: 170px;
+    text-align: center;
+    height: 170px;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+  }
+  .itemHeaderVisible {
+    position: relative;
+    font-weight: 700;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid white;
+      border-radius: 50%;
+      opacity: 0;
+      animation: fadeInBorder 2s forwards;
+    }
+  }
+  .itemContent {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 400;
+  }
+}
+
+@keyframes fadeInBorder {
+  to {
+    opacity: 1;
+  }
+}

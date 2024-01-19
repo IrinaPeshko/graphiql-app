@@ -1,0 +1,17 @@
+.team {
+  margin: 50px;
+  @media (max-width: 540px) {
+    margin: 20px;
+  }
+  @media (max-width: 380px) {
+    margin: 10px;
+  }
+  .teamHeader {
+    text-align: center;
+    margin: 20px;
+    font-size: 2em;
+    @media (max-width: 380px) {
+      font-size: 1.5em;
+    }
+  }
+}

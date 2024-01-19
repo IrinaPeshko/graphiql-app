@@ -1,0 +1,65 @@
+.queryContainer {
+  height: 100%;
+  overflow-y: auto;
+  background-color: var(--bg-color-editor);
+  padding: 10px;
+  color: var(--color-primary-text);
+
+  .title {
+    font-weight: 700;
+  }
+
+  .queryButtons {
+    display: flex;
+    justify-content: space-between;
+
+    .queryButtonsTitle {
+      display: flex;
+      gap: 10px;
+    }
+
+    .queryButton {
+      background-color: transparent;
+      min-width: max-content;
+      width: 70px;
+      height: 40px;
+      border-radius: 5px;
+      padding: 0;
+      border: none;
+      color: var(--color-secondary-text);
+    }
+
+    .queryButtonActive {
+      font-weight: 700;
+      color: var(--color-primary-text)
+    }
+
+    .arrowButton {
+      width: 40px;
+      height: 40px;
+      border-radius: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+  }
+
+  .arrowIcon {
+    width: 22px;
+    height: 22px;
+    filter: invert(50%);
+
+    &:hover {
+      filter: invert(100%);
+    }
+  }
+
+  .rotatedArrow {
+    transform: rotate(180deg);
+  }
+}
