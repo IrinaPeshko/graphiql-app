@@ -54,7 +54,7 @@ The project is organized into the following main components:
   
 ## Deployment
 
-The demo version of the application is deployed on [gh-pages](#) for easy access.
+The demo version of the application is deployed on https://codehub-graphiql-app.netlify.app/ for easy access.
 
 ## Contribution
 
